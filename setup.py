@@ -1,5 +1,6 @@
 import re
 import ast
+import requests
 from os import path
 from setuptools import setup, find_packages
 
@@ -15,12 +16,16 @@ with open('HISTORY.rst') as history_file:
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
+definitions_url_pypi_url = "https://pypi.org/pypi/alertlogic-sdk-definitions/json"
+definitions_sdk_latest_version = requests.get(definitions_url_pypi_url).json()['info']['version']
+
 requirements = [
         'requests>=2.18',
         'configparser>=4.0.2',
         'pyyaml==5.1.2',
         'jsonschema[format_nongpl]==3.2.0',
-        'm2r==0.2.1'
+        'm2r==0.2.1',
+        'alertlogic-sdk-definitions>=' + definitions_sdk_latest_version
     ]
 
 test_requirements = [ ]
