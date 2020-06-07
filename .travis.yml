@@ -6,12 +6,12 @@ install: pip install -U tox-travis
 script: tox
 deploy:
   provider: pypi
-  server: https://test.pypi.org/
+  server: https://test.pypi.org/legacy/
   distributions: sdist bdist_wheel
   user: alertlogic
   password:
     secure: cGOkvle8WP+/RT/qrrA7dkh2KcRd/WKlJGmd7t30MAzTUyTMJ3CZoLcbHpTyoTWNLbI+W9Kyk0QmMwreDigiAcFjIRmDpzdJ+bD3qUeN3+PEBdiY9Yfu69mzgyu73JMkOzqRNTGlZngJLGcJZ/TlepqJGcrLSRQ50ReUNHGTNWTBDt4AVeVCAxC4tjrNHkc0bqftXFJFWbUbZt/jXZgxjXubZwY88qZX5BsgICqEFOP5wGEWKF1IjdhHlXHH3Me5fSsJWctNlFc2Fklkw9z+mZKwiBOiMrkjQTOEIWu7M3aGOMMZR3y9tiLG3PPJE/t8c29sl+jOYJfsEsoMZfUEgJjBxnH13+1i2rMDQrK02WOAimN2kyeZDNzatHrXyUbwvy3+Ki2KpwoWaAa3cnmaUSjcUwsbKcI2zxoCMoMKr4rb42yHX7bTGs7sa8OBf0usphPH4xA61COaVgZoUD7guyR9ua9WfmbQr8k3aKombXibV+ljHUd43LT23cQqlFibs4i7qPT7JmTU3It48wTF2wSGByzF3JoQFKW1eV2BzvPF8uaNxjjjn5vS85U6LGz0T9jt7R3QFP/IyuvmsP8H3KIwWT04h+z4PvlqPSaqkJVQy8NLfxRVnapjOFR0/30u0Myz1BPp2hJyT1YoCDIku6p2L7SQssmONdwS2EWvuAI=
   on:
     tags: true
-    repo: alertlogic/alertlogic-sdk-python
+    repo: anton-b/alertlogic-sdk-python
     python: 3.8
