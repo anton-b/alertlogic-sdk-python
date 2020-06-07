@@ -1,14 +1,7 @@
 import re
-import ast
-import requests
-from os import path
+import json
+from urllib import request
 from setuptools import setup, find_packages
-
-_version_re = re.compile(r'__version__\s+=\s+(.*)')
-
-with open('almdrlib/__init__.py', 'rb') as f:
-    version = str(ast.literal_eval(_version_re.search(
-        f.read().decode('utf-8')).group(1)))
 
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
@@ -16,8 +9,11 @@ with open('HISTORY.rst') as history_file:
 with open('README.md') as readme_file:
     readme = readme_file.read()
 
+with request.urlopen("https://pypi.org/pypi/alertlogic-sdk-definitions/json") as defs_rq:
+    defs_info = json.loads(defs_rq.read())
+
 definitions_url_pypi_url = "https://pypi.org/pypi/alertlogic-sdk-definitions/json"
-definitions_sdk_latest_version = requests.get(definitions_url_pypi_url).json()['info']['version']
+definitions_sdk_latest_version = defs_info['info']['version']
 
 requirements = [
         'requests>=2.18',
@@ -32,7 +28,7 @@ test_requirements = [ ]
 
 setup(
     name='alertlogic-sdk-python',
-    version=version,
+    use_scm_version=True,
     url='https://github.com/alertlogic/alertlogic-sdk-python',
     license='MIT license',
     author='Alert Logic Inc.',
