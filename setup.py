@@ -29,6 +29,7 @@ test_requirements = [ ]
 setup(
     name='alertlogic-sdk-python',
     use_scm_version=True,
+    setup_requires=['setuptools_scm'],
     url='https://github.com/alertlogic/alertlogic-sdk-python',
     license='MIT license',
     author='Alert Logic Inc.',
