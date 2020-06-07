@@ -6,11 +6,13 @@ install: pip install -U tox-travis
 script: tox
 deploy:
   provider: pypi
+  server: https://test.pypi.org/legacy/
+  skip_cleanup: true
   distributions: sdist bdist_wheel
-  user: alertlogic
+  username: __token__
   password:
-    secure: Y4wOV54F50M1X/6HQnSKf6sAVptK0vurXF2psQh/PwyqQy97jyVJmZvrEPeRJwjTx2zKO7+rvyKC8l/dJkI58l6XYlz/aFZwL4RXICNdcLQiEKcxd6rXfhB9wZZ+kr1CsX/cJYRgTJMGnVIx3wDo3FV3zHykDUS4WZTcbw1VlDT5ji4fcjbKtlKhyd3eRp3CnGdiDJ8d40Qw14gb8ys++PDJR+DPPNlTS3EFM2y9x/+UTCBg1GzckK+9NZXfLxkYJkSv514lFxjEzGbPY2V02z69yyH2zz/lOYh7hCRWSC2PrhIu/Q6K5w+7u8GZTR+ZBpjQuMhrtGmtFYHIkKNMvEIgRmnDVlR4SaThXpCBfbLBeceC2wT1RFegmUj8g4Wrq/kINBvY18sKtd/93Bgl6kdUxJiSHBMLtYifGeEn8eogkyys90E5a3U8FWHVhq4+6Q5IE9+idjzVS28sv+16V8M1XMmxvDhxBFbOP+XBKYJQyX9MEM2hnWlN7Q7QyFGdBpXdwkDl/DBTzN5JBRsyEivSWA485VCXoIhOlQ4ogpamekEDSw4SyOaAmsSb8o+i0ooc6TU8hmHb/kxX3uhovHJZnKUdG/cd1eecy3MTYVpvRCnaIRlcPIEKfc5TI/RBg7lNO9H4G5hmjJhYFBTEYOKLmlQoJSpUv3xHF0xRTwo=
+    secure: HZg9LPeii8vgFfyw0H0MhdBuKtMNg9F2jV8rob1CompulB+EHcx0Fa2aOKdihJDS5H1ZZ3SKRjKQOowEwIpYRy5DoMxT5s1gZMzVF55zZOMwoBunsYltU1M8BrwgyDujj5B7fyamF8xqUo14yaAa/nOW862IsqxV7RO1HZbbFzPuVubA3u3illkk3Hm54aklgd0qMo8kDu0Ub/5w04e7n47noaIM4sq8r+oEbqXVc4+B8PIC6ubNERiuefFFutxGbyurauepOGmuXjjW/73btei6PB9TJua9d4h4VoACv3YMln9uBwPE42GAuLYvFeeJ/0NAmQBRVKJXiXOZYYQO9MD5GHWonZZcLNJZTXEcyNjmktEdlZe1DGMc6ZbguM6zquU1ngg8zg7AZ3o/l2fwQeA84lS6UBrGcFGOFxp1hxRw0DgCWESwu2QE+rQM3rhE0/j5Ws1R55EwdZ8f3XArthbPvEp985NPBsolFhkKo9jEt15ohyYVw8oPJo1Jqtrj1DPhv2oRQWx12YCXJj+fpVwyYsid9wVcyQjG9jKDswsbon0Xk9tpEVIX5NJQ/Cbio9ETIEdJYwZpbss0WBehX/s4fEGr7k2bDcw1PSkHur82DbixQhnTVa1CrhwsdWZ2b3SSTBDMxPYtOb2Ox8p6J7qnL9YnabcmnfFE8hLxA1c=
   on:
     tags: true
-    repo: alertlogic/alertlogic-sdk-python
+    repo: anton-b/alertlogic-sdk-python
     python: 3.8
