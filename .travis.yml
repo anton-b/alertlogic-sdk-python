@@ -9,8 +9,8 @@ deploy:
   server: https://test.pypi.org/legacy/
   skip_cleanup: true
   distributions: sdist bdist_wheel
-  username: __token__
-  password: $test-pypi-tok
+  user: __token__
+  password: pypi-AgENdGVzdC5weXBpLm9yZwIkY2MwOTFkZTMtNjNiYy00YmQ0LThjMjYtMGRkNWNlYjEzODk4AAJHeyJwZXJtaXNzaW9ucyI6IHsicHJvamVjdHMiOiBbImFsZXJsdGxvZ2ljLXNkay1weXRob24iXX0sICJ2ZXJzaW9uIjogMX0AAAYgec3a2T1xvg0-pCXIqs-uHzcqDtBi1_n9CBNVNBbSCo8
   on:
     tags: true
     repo: anton-b/alertlogic-sdk-python
