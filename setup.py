@@ -11,11 +11,11 @@ with open('README.md') as readme_file:
 
 try:
     # This is to force definitions to be upgraded every build not related to the definitions change
-    with request.urlopen("https://pypi.org/pypi/alertlogic-sdk-definitions/json") as defs_rq:
+    defs_url_pypi = "https://pypi.org/pypi/alertlogic-sdk-definitions/json"
+    with request.urlopen(defs_url_pypi) as defs_rq:
         defs_info = json.loads(defs_rq.read())
-    definitions_url_pypi_url = "https://pypi.org/pypi/alertlogic-sdk-definitions/json"
-    definitions_sdk_latest_version = defs_info['info']['version']
-    definitions_dependency = 'alertlogic-sdk-definitions>=' + definitions_sdk_latest_version
+    definitions_latest_version = defs_info['info']['version']
+    definitions_dependency = 'alertlogic-sdk-definitions>=' + definitions_latest_version
 except:
     definitions_dependency = 'alertlogic-sdk-definitions>=0.0.4'
 
