@@ -10,7 +10,8 @@ deploy:
   skip_cleanup: true
   distributions: sdist bdist_wheel
   username: __token__
-  password: $test-pypi-tok
+  password:
+    secure: I3Zu8+Ddk/JweuCz4Sp0Wp3/XcKAbFJMxLDVpoeQBLwwEHgucPtARN957AJmrYLttifQgp4fQ3l7F27SSBufAjJX9UHLLrrPBJJsGezBz2s2WPajp65u1JZfyCXWXzVxwkV67wrlfSf0MKHKg/GOkgR/CFclK18dZs+F0JMFu1kEl3WPeOAqC0/dFCFqRctqY+v9d4JNBIcEotO+hKm03zi4ZXNiBXnziJAjZI3dYhFTjHZaWexcpKavWYeRqM0/oOevIsR1VUgjSN4Cgux8qNvSAxXGFTYCQKXkBeWD+idKYdb9Lll16WkqQQuoUAKNLDUOxpyNIOT7llaNQrKkhntNPNh8hSt/sHOUdYdId3QuNgfMRb2+qyyUHQTO6M8RMKC7o0bMxUflyo/WPasQD9GLBgV17o4ZPdA1hJsi0DE6EtFmRLoz1wtsKlQij3GUeErnglhyWkdv75Qe0FcQwlhUWpP+nfI5+rwND0B8P/oK/ySdc1X1TOzBJpGsndEsEK2LQVNcHQKapmivocEVsS/j1fy0+pl/yzihamqXN8KUgaXMDneOEGarzsy2ENp60UU2YpDuA7vLYDjGr/BP99fSOxse5cOaHrMyg+54cJNkyXU4Vfc/GZRDcNFEiyC9PRkb4aR49DKVa5kfeGrfv8KIabePc+o6AOKzOgGF3Xo=
   on:
     tags: true
     repo: anton-b/alertlogic-sdk-python
